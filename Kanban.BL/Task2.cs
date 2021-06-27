@@ -15,29 +15,29 @@ namespace Kanban.BL
         {
             foreach (Task activity in ActivityInfo)
             {
-                Console.WriteLine("Subject: {0} \n Activity Number: {1} \n Date: {2}", activity.Subject, activity.Number, activity.Date);
+                Console.WriteLine("Subject: {0} \n Act./Assign. Number: {1} \n Date: {2}", activity.Subject, activity.Number, activity.Date);
             }
         }
         public void AddActivity()
         {
             foreach (Task product in ActivityInfo)
             {
-                Console.WriteLine("Subject: {0} \n Activity Number: {1} \n Date: {2}", product.Subject, product.Number, product.Date);
+                Console.WriteLine("Subject: {0} \n Act./Assign. Number: {1} \n Date: {2}", product.Subject, product.Number, product.Date);
             }
 
             Console.WriteLine("Enter the subject you need to do: ");
             string addActivity = Console.ReadLine();
-            Console.WriteLine("Enter activity number: ");
+            Console.WriteLine("Enter activity/assignment number: ");
             string addActivityNumber = Console.ReadLine();
             DateTime addDate = DateTime.Now;
 
 
             ActivityInfo.Add(new Task(addActivity, addActivityNumber, addDate));
-            Console.WriteLine("Subject: {0} \n Activity Number: {1} \n Date: {2} \n Successfully added!", addActivity, addActivityNumber, addDate);
+            Console.WriteLine("Subject: {0} \n Act./Assign. Number: {1} \n Date: {2} \n Successfully added!", addActivity, addActivityNumber, addDate);
 
             foreach (Task activity in ActivityInfo)
             {
-                Console.WriteLine("Subject: {0} \n Activity Number: {1} \n Date: {2}", activity.Subject, activity.Number, activity.Date);
+                Console.WriteLine("Subject: {0} \n Act./Assign. Number: {1} \n Date: {2}", activity.Subject, activity.Number, activity.Date);
             }
         }
         public void RemoveActivity()
